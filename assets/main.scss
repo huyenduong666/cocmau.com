@@ -1,0 +1,92 @@
+---
+---
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+$base-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$background-color: #F7F7FF;
+$text-color: #514c9e;
+$base-line-height: 1.5;
+$brand-color: $text-color;
+
+@import "minima";
+
+.site-title, .site-title:visited {
+  color: $text-color;
+}
+
+.hero-banner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  background-color: transparent;
+  padding: 40px 0;
+  margin-bottom: 40px;
+  text-align: left;
+  box-shadow: none;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero-image {
+    flex: 0 0 200px;
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      @media screen and (max-width: 800px) {
+        margin: 0 auto;
+        width: 150px;
+      }
+    }
+  }
+
+  .hero-content {
+    flex: 1;
+    max-width: none;
+    margin: 0;
+  }
+
+  .hero-title {
+    color: $text-color;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: $text-color;
+    opacity: 0.9;
+    max-width: 500px;
+    margin: 0;
+    line-height: 1.6;
+    @media screen and (max-width: 800px) {
+      margin: 0 auto;
+    }
+  }
+}
+
+.post-list-heading {
+  text-align: center;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 80px 0 40px;
+  color: $text-color;
+  opacity: 0.8;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: $text-color;
+    margin: 15px auto 0;
+    opacity: 0.5;
+  }
+}
